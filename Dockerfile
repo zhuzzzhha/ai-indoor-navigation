@@ -13,7 +13,7 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir wheel setuptools
-
+RUN pip install -r requirements.txt
 
 COPY . .
 
