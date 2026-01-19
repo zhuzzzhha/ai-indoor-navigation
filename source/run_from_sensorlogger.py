@@ -12,7 +12,7 @@ def process(path, model_path):
 
 def create_ronin_pickle(path):
   print(f"Creating RoNIN format pickle from SensorLogger data in {path}" )
-  acc = pd.read_csv(path + "/TotalAcceleration.csv")
+  acc = pd.read_csv(path + "/Acceleration.csv")
   gyr = pd.read_csv(path + "/Gyroscope.csv")
   rv = pd.read_csv(path + "/Orientation.csv") 
 
@@ -93,7 +93,7 @@ def create_pdr_csv(path):
 
     _annotate_pdr(df, path)
 
-    pdr_path = path + "/processed/pdr.csv"
+    pdr_path = path + "processed/pdr.csv"
     print(f"Saving PDR output to {pdr_path}")
     df.to_csv(pdr_path, index=False)
 

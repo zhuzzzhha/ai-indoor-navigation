@@ -18,7 +18,7 @@
 Полученные данные должны быть в следующем формате:
   * `Gyroscope.csv`
   * `Orientation.csv`
-  * `TotalAcceleration.csv`
+  * `Acceleration.csv`
 
 При использовании других приложений для сбора данных необходимо конвертировать их в описанный формат.
 
@@ -35,7 +35,7 @@ time,seconds_elapsed,qz,qy,qx,qw,roll,pitch,yaw
 ```
 NOTE: roll, pitch, and yaw are not required by RoNIN
 
-### TotalAcceleration.csv:
+### Acceleration.csv:
 ```
 time,seconds_elapsed,z,y,x
 1716979893874983200,0.047983154296875,9.851848602294922,1.407876968383789,-0.008374879136681557
