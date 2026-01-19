@@ -44,7 +44,7 @@ time,seconds_elapsed,z,y,x
 ## Запуск тестового примера на данных открытого датасета
 Для использования модели архитектуры **ResNet** необходимо запустить команду с нужными аргументами:
 
-``` python source/ronin_resnet.py --mode test --test_list <path-to-train-list> --root_dir <path-to-dataset-folder> --out_dir <path-to-output-folder> --model_path <path-to-model-checkpoint>```
+``` python source/ronin_resnet.py --mode test --test_list <path-to-train-list> --root_dir <path-to-dataset-folder> --out_dir <path-to-output-folder> --model_path ronin_resnet/checkpoint_gsn_latest.pt```
 
 Модель архитектуры **LSTM**:
 
