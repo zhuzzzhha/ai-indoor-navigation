@@ -12,7 +12,7 @@
 
 ## Получение траектории из данных SensorLogger
 В запущенном контейнере выполните команду
-```python3 source/run_from_sensorlogger.py --path <sensor_logger_data> --model_path <ronin_model_path>```
+```python3 source/run_from_sensorlogger.py --path <sensor_logger_data> --model_path ronin_resnet/checkpoint_gsn_latest.pt```
 
 
 Полученные данные должны быть в следующем формате:
