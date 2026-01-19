@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     build-essential \
     python3-dev \
+    sudo \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
@@ -12,8 +13,8 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir wheel setuptools
-RUN pip install -r requirements.txt
+    pip install --no-cache-dir wheel setuptools && \
+    pip install -r requirements.txt
 
 COPY . .
 

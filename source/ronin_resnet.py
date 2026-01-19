@@ -374,7 +374,7 @@ def test_sequence(args):
                 f.write('{:.6f},{:6f},{:.6f}\n'.format(losses_avg[i], ate_all[i], rte_all[i]))
 
     #print('----------\nOverall loss: {}/{}, avg ATE:{}, avg RTE:{}'.format(
-        np.average(losses_seq, axis=0), np.average(losses_avg), np.mean(ate_all), np.mean(rte_all)))
+        #np.average(losses_seq, axis=0), np.average(losses_avg), np.mean(ate_all), np.mean(rte_all)))
     return losses_avg
 
 

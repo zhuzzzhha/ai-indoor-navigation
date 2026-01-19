@@ -92,10 +92,19 @@ def create_pdr_csv(path):
     df["y"] = y
 
     _annotate_pdr(df, path)
-
-    pdr_path = path + "processed/pdr.csv"
-    print(f"Saving PDR output to {pdr_path}")
-    df.to_csv(pdr_path, index=False)
+    print(f"DF {df.head()}")
+    pdr_path = path + "/processed/pdr.csv"
+    try:
+        df.to_csv(pdr_path, index=False)
+        print("File saved successfully!")
+    except PermissionError:
+        print(f"Permission denied! Cannot write to {pdr_path}")
+        # Попробуйте альтернативный путь
+        alt_path = os.path.join(os.path.expanduser("~"), "pdr.csv")
+        print(f"Trying to save to {alt_path} instead")
+        df.to_csv(alt_path, index=False)
+    except Exception as e:
+        print(f"Error saving CSV: {e}")
 
 def main():
   parser=argparse.ArgumentParser()
